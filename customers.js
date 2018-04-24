@@ -243,12 +243,21 @@ const customers = {
     ]
   }
 
-const emails = []
+// const emails = []
 
-customers.customers.forEach(customer => {
-    customer.contacts.email.forEach(email =>{
-        emails.push(email)
-    })
+// customers.customers.forEach(customer => {
+//     customer.contacts.email.forEach(email =>{
+//         emails.push(email)
+//     })
+// })
+
+// console.log(emails)
+
+const emails = customers.customers.map(customer => {
+  holdingArray = customer.contacts.email.map(email => {
+    return email
+  })
+  return holdingArray
 })
 
 console.log(emails)
